@@ -17,17 +17,23 @@ const Product = db.define('product', {
     }
   },
   price: {
-    type: Sequelize.FLOAT,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-    }
+    type: Sequelize.TEXT,
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true,
+    // }
   },
   description: {
     type: Sequelize.TEXT,
   },
+  weight: {
+    type: Sequelize.TEXT,
+  },
+  brand: {
+    type: Sequelize.TEXT,
+  },
   category: {
-    type: Sequelize.ENUM('dog', 'cat', 'reptile', 'bird', 'rodent', 'other'),
+    type: Sequelize.ENUM('Dog', 'Cat', 'Reptile', 'Bird', 'Rodent', 'Live', 'Other'),
     allowNull: false,
     validate: {
       notEmpty: true,
@@ -36,9 +42,12 @@ const Product = db.define('product', {
 });
 
 Product.beforeSave((product) => {
-  product.price *= 100;
+  // product.price *= 100;
+    if (Number(product.price)) {
+    product.price = Number(product.price)
+  }
 })
 
 module.exports = Product;
 
-// name, imageURL, price, description, category
+// name, imageURL, price, description, weight, brand, category
