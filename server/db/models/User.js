@@ -47,7 +47,7 @@ const User = db.define('user', {
     allowNull: false,
     validate: {
       notEmpty: true,
-      len: [6, 20]
+      len: [5, 20]
     }
   },
   isAdmin: {
