@@ -1,9 +1,12 @@
 import React from "react";
+// import Navbar from "./components/Navbar";
+import RoutePaths from "./RoutePaths"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <p>Hi from src/App.js</p>
+    <div>
+      {/* <Navbar /> */}
+      <RoutePaths />
     </div>
   );
 }
