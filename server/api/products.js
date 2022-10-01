@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const {
-  models: { Product, User },
+  models: { FavoriteItem, Product, User },
 } = require("../db");
 
 // view all products
