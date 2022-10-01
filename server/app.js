@@ -7,8 +7,8 @@ module.exports = app;
 
 app.use(morgan("dev")); // logging middleware
 app.use(express.json()); // body parsing middleware
-app.use("/auth", require("./auth")); // auth routes
-app.use("/api", require("./api"));
+// app.use("/auth", require("./auth")); // auth routes
+app.use("/api", require("./api")); // api routes
 
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "..", "public/index.html"))
