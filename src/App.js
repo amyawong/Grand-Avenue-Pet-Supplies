@@ -1,11 +1,11 @@
 import React from "react";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import RoutePaths from "./RoutePaths"
 
 const App = () => {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <RoutePaths />
     </div>
   );
