@@ -32,8 +32,15 @@ const Product = db.define('product', {
   brand: {
     type: Sequelize.TEXT,
   },
+  animal: {
+    type: Sequelize.ENUM('Dog', 'Cat', 'Reptile', 'Bird', 'Rodent', 'Live', 'Fish', 'Other'),
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    }
+  },
   category: {
-    type: Sequelize.ENUM('Dog', 'Cat', 'Reptile', 'Bird', 'Rodent', 'Live', 'Other'),
+    type: Sequelize.ENUM('Food/Treats', 'Supplies', 'Toys', 'Accessories', 'Other/Miscellaneous'),
     allowNull: false,
     validate: {
       notEmpty: true,
@@ -50,4 +57,4 @@ Product.beforeSave((product) => {
 
 module.exports = Product;
 
-// name, imageURL, price, description, weight, brand, category
+// name, imageURL, price, description, weight, brand, animal, category

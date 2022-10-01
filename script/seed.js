@@ -12,7 +12,8 @@ const products = [
     // description: "",
     brand: "PetAg",
     weight: "12 oz",
-    category: "Cat",
+    animal: "Cat",
+    category: "Food/Treats",
   },
   {
     name: "Milk Bone Dog Snacks, Small",
@@ -22,7 +23,8 @@ const products = [
     // description: "",
     brand: "Milk Bone",
     weight: "24 oz",
-    category: "Dog",
+    animal: "Dog",
+    category: "Food/Treats" 
   },
   {
     name: "Assorted Bird Toys",
@@ -32,7 +34,8 @@ const products = [
     // description: "",
     // brand: "",
     // weight: "",
-    category: "Bird",
+    animal: "Bird",
+    category: "Toys"
   },
   // {
   //   name: "",
@@ -41,6 +44,7 @@ const products = [
   //   // description: "",
   //   // brand: "",
   //   // weight: "",
+  //   animal: "",
   //   category: "",
   // },
   // {
@@ -50,6 +54,7 @@ const products = [
   //   // description: "",
   //   // brand: "",
   //   // weight: "",
+  //   animal: "",
   //   category: "",
   // },
   // {
@@ -59,6 +64,7 @@ const products = [
   //   // description: "",
   //   // brand: "",
   //   // weight: "",
+  //   animal: "",
   //   category: "",
   // },
   // {
@@ -68,6 +74,7 @@ const products = [
   //   // description: "",
   //   // brand: "",
   //   // weight: "",
+  //   animal: "",
   //   category: "",
   // },
   // {
@@ -77,6 +84,7 @@ const products = [
   //   // description: "",
   //   // brand: "",
   //   // weight: "",
+  //   animal: "",
   //   category: "",
   // },
   // {
@@ -86,6 +94,7 @@ const products = [
   //   // description: "",
   //   // brand: "",
   //   // weight: "",
+  //   animal: "",
   //   category: "",
   // },
 ];
