@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const {
-  models: { Product, User },
+  models: { FavoriteItem, List, Product, User },
 } = require("../db");
 
 // find all customers

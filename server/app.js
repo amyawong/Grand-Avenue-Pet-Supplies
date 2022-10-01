@@ -3,7 +3,6 @@ const express = require("express");
 const morgan = require("morgan");
 
 const app = express();
-module.exports = app;
 
 app.use(morgan("dev")); // logging middleware
 app.use(express.json()); // body parsing middleware
@@ -17,7 +16,7 @@ app.get("/", (req, res) =>
 app.use(express.static(path.join(__dirname, "..", "public"))); // static file-serving middleware
 
 app.use((req, res, next) => {
-  if (path.extname(req.path.length)) {
+  if (path.extname(req.path).length) {
     const err = new Error("Not Found");
     err.status = 404;
     next(err);
@@ -38,3 +37,5 @@ app.use((err, req, res, next) => {
     message: err.message || "Internal server error.",
   });
 }); // error handling endware
+
+module.exports = app;
