@@ -2,7 +2,7 @@
 function App() {
   return (
     <div className="App">
-      <p>Hi from client/App.js</p>
+      <p>Hi from src/App.js</p>
     </div>
   );
 }
