@@ -1,9 +1,9 @@
-import React, { Component }from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+// import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchProduct } from "../store/singleProduct";
 
-export class SingleProduct extends Component  {
+export class SingleProduct extends Component {
   // constructor() {
   //   super();
   // }
@@ -13,7 +13,7 @@ export class SingleProduct extends Component  {
   }
 
   render() {
-    console.log('this.props: ', this.props)
+    console.log("this.props: ", this.props);
     const product = this.props.product;
     return (
       <div className="">
@@ -26,16 +26,16 @@ export class SingleProduct extends Component  {
         <p>{product.animal}</p>
         <p>{product.category}</p>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state) => ({
   product: state.singleProduct,
-})
+});
 
 const mapDispatchToProps = (dispatch) => ({
-  getSingleProduct: (id) => dispatch(fetchProduct(id))
-})
+  getSingleProduct: (id) => dispatch(fetchProduct(id)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleProduct);

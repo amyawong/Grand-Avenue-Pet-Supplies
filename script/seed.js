@@ -24,7 +24,7 @@ const products = [
     brand: "Milk Bone",
     weight: "24 oz",
     animal: "Dog",
-    category: "Food/Treats" 
+    category: "Food/Treats",
   },
   {
     name: "Assorted Bird Toys",
@@ -35,11 +35,12 @@ const products = [
     // brand: "",
     // weight: "",
     animal: "Bird",
-    category: "Toys"
+    category: "Toys",
   },
   {
     name: "Hill's Science Diet Adult Chicken & Barley Recipe Dry Dog Food",
-    imageURL: "https://image.chewy.com/is/image/catalog/157803_MAIN._AC_SL600_V1658439096_.jpg",
+    imageURL:
+      "https://image.chewy.com/is/image/catalog/157803_MAIN._AC_SL600_V1658439096_.jpg",
     price: "42.99",
     // description: "",
     brand: "Hill's Science",
@@ -49,7 +50,8 @@ const products = [
   },
   {
     name: "5 Gallon Fish Tank",
-    imageURL: "https://i5.walmartimages.com/asr/57bf5d79-5d8f-435b-a9a9-b4a37782a39c.603ef157ce50a8c1f84ae9b9e9194b70.jpeg",
+    imageURL:
+      "https://i5.walmartimages.com/asr/57bf5d79-5d8f-435b-a9a9-b4a37782a39c.603ef157ce50a8c1f84ae9b9e9194b70.jpeg",
     price: "40.99",
     // description: "",
     // brand: "",
@@ -59,7 +61,8 @@ const products = [
   },
   {
     name: "KONG Classic Dog Toy",
-    imageURL: "https://s7d2.scene7.com/is/image/PetSmart/PB_1005_CUSTOM_BRAND_KONG_Classic_20171211?$PB1001$",
+    imageURL:
+      "https://s7d2.scene7.com/is/image/PetSmart/PB_1005_CUSTOM_BRAND_KONG_Classic_20171211?$PB1001$",
     price: "9.99",
     // description: "",
     brand: "KONG Classic",
@@ -89,7 +92,8 @@ const products = [
   },
   {
     name: "Stainless Steel Water Bowl",
-    imageURL: "https://i5.walmartimages.com/asr/42b04df3-2c5f-430d-a272-f5bfcd771aba_1.e6b9a04e932ab31d39b2ced52c753fdd.jpeg",
+    imageURL:
+      "https://i5.walmartimages.com/asr/42b04df3-2c5f-430d-a272-f5bfcd771aba_1.e6b9a04e932ab31d39b2ced52c753fdd.jpeg",
     price: "3.99",
     // description: "",
     // brand: "",
@@ -181,10 +185,10 @@ const seed = async () => {
     const list1 = await List.create({ status: "has product(s)" });
     const list2 = await List.create({ status: "empty" });
 
-    await list1.setUser(user1)
-    await list2.setUser(user2)
-    await list1.addProduct(product1)
-    await list1.addProduct(product3)
+    await list1.setUser(user1);
+    await list2.setUser(user2);
+    await list1.addProduct(product1);
+    await list1.addProduct(product3);
 
     // console.log("User Magic Methods: ", Object.keys(User.prototype));
     // console.log("Product Magic Methods: ", Object.keys(Product.prototype));
@@ -193,6 +197,7 @@ const seed = async () => {
   } catch (err) {
     console.log(err);
   }
+  console.log(`seeded successfully`);
 };
 
 async function run() {
@@ -209,10 +214,10 @@ async function run() {
   }
 }
 
-// if (module === require.main) {
-//   run();
-// }
+if (module === require.main) {
+  run();
+}
 
-run();
+// run();
 
 module.exports = seed;
