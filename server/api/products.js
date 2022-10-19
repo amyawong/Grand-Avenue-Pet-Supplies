@@ -1,12 +1,14 @@
 const router = require("express").Router();
-const {
-  models: { FavoriteItem, List, Product, User },
-} = require("../db");
+// const {
+//   models: { FavoriteItem, List, Product, User },
+// } = require("../db");
+const Product = require("../db/models/Product");
 
 // view all products
 router.get("/", async (req, res, next) => {
   try {
     const products = await Product.findAll(); // allProducts
+    console.log(products);
     res.send(products);
   } catch (error) {
     next(error);
@@ -14,14 +16,14 @@ router.get("/", async (req, res, next) => {
 });
 
 // view single product
-router.get('/:id', async (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
   try {
     const product = await Product.findByPk(req.params.id); // singleProduct
-    res.send(product)
+    res.send(product);
   } catch (error) {
-    next(error)
+    next(error);
   }
-})
+});
 
 // // view product by category
 

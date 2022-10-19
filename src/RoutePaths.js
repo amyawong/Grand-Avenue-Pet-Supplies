@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import { Route, Routes, withRouter } from "react-router-dom"
+import React, { Component } from "react";
+import { Route, Routes } from "react-router-dom";
 // import { connect } from "react-redux"
 
 // components
@@ -8,16 +8,16 @@ import { Route, Routes, withRouter } from "react-router-dom"
 // import Admin from "./components/Admin"
 // import AdminShop from "./components/AdminShop"
 // import AdminUsers from "./components/AdminUsers"
-import AllProducts from "./components/AllProducts"
-import Contact from "./components/Contact"
+import AllProducts from "./components/AllProducts";
+import Contact from "./components/Contact";
 // import Favorites from "./components/Favorites"
 // import Feed from "./components/Feed"
-import Home from "./components/Home"
+import Home from "./components/Home";
 // import Live from "./components/Live"
-// import Login from "./components/Login"
-import NotFound from "./components/NotFound"
+import Login from "./components/Login"
+// import NotFound from "./components/NotFound"
 // import SignUp from "./components/SignUp"
-import SingleProduct from "./components/SingleProduct"
+import SingleProduct from "./components/SingleProduct";
 // import UpdateProduct from "./components/UpdateProduct"
 // import UpdateUser from "./components/UpdateUser"
 // import UserProfile from "./components/UserProfile"
@@ -27,7 +27,7 @@ class RoutePaths extends Component {
   // componentDidMount() {
   //   this.props.loadInitialData();
   // }
-  
+
   render() {
     return (
       <div>
@@ -42,7 +42,7 @@ class RoutePaths extends Component {
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/favorites" element={<Favorites />} /> */}
           {/* <Route path="/live" element={<Live />} /> */}
-          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/login" element={<Login />} />
           {/* <Route path="/signup" element={<SignUp />} /> */}
           {/* <Route path="/profile" element={<UserProfile />} /> */}
           <Route exact path="/products/:id" element={<SingleProduct />} />
@@ -50,7 +50,7 @@ class RoutePaths extends Component {
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </div>
-    )
+    );
   }
 }
 

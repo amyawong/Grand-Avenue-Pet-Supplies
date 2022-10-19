@@ -19,11 +19,10 @@ export const _setProducts = (products) => ({
 export const fetchProducts = () => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get("/api/products");
-      // dispatch(_getProducts(data))
-      dispatch(_setProducts(data));
+      const { data: products } = await axios.get("/api/products");
+      dispatch(_setProducts(products));
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   };
 };

@@ -19,7 +19,7 @@ const FavoriteItem = db.define("favoriteItem", {
 FavoriteItem.beforeSave((favoriteItem) => {
   if (Number(favoriteItem.unitPrice)) {
     // favoriteItem.unitPrice = Number(favoriteItem.unitPrice);
-    favoriteItem.unitPrice = `$${Number(favoriteItem.unitPrice)}`;
+    favoriteItem.unitPrice = `${Number(favoriteItem.unitPrice)}`;
   }
 });
 

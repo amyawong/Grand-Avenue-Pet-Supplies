@@ -1,3 +1,4 @@
+const { yellow } = require("chalk");
 const { db } = require("./db");
 const PORT = process.env.PORT || 3000;
 const app = require("./app");
@@ -10,7 +11,7 @@ const init = async () => {
     } else {
       await db.sync();
     }
-    app.listen(PORT, () => console.log(`Listening in on port ${PORT}`));
+    app.listen(PORT, () => console.log(yellow(`Listening in on port ${PORT}`)));
   } catch (ex) {
     console.log(ex);
   }
